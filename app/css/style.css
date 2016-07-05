@@ -1,0 +1,11 @@
+section#contact .form-group textarea.form-control {
+    /*height: 150px;*/
+}
+
+.img-profile {
+    margin-left: 35px;
+    margin-top: -65px;
+    width: 150px;
+    position: absolute;
+    height: 150px
+}
