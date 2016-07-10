@@ -6409,3 +6409,353 @@ REQUEST_URI=/fitness/app/index.php?r=site/putPermission&id=1
 in D:\git\fitness\app\protected\views\site\addPermission.php (91)
 in D:\git\fitness\app\protected\controllers\SiteController.php (154)
 in D:\git\fitness\app\index.php (13)
+2016/07/06 18:36:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2' at line 4. The SQL statement executed was: SELECT users.*, roles.name as role_name						
+						FROM users LEFT JOIN roles ON users.role_id = roles.id
+						LEFT JOIN permissions ON users.id = permissions.user_id
+						WHERE username = "<script type="text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2f95530b71e7".
+in D:\git\fitness\app\protected\controllers\SiteController.php (671)
+in D:\git\fitness\app\index.php (13)
+2016/07/06 18:36:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2' at line 4. The SQL statement executed was: SELECT users.*, roles.name as role_name						
+						FROM users LEFT JOIN roles ON users.role_id = roles.id
+						LEFT JOIN permissions ON users.id = permissions.user_id
+						WHERE username = "<script type="text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2f95530b71e7"' in D:\git\fitness\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\git\fitness\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\git\fitness\app\protected\controllers\SiteController.php(671): CDbCommand->queryAll()
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('login')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/login
+HTTP_REFERER=http://localhost/fitness/app/
+---
+2016/07/06 18:36:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2' at line 4. The SQL statement executed was: SELECT users.*, roles.name as role_name						
+						FROM users LEFT JOIN roles ON users.role_id = roles.id
+						LEFT JOIN permissions ON users.id = permissions.user_id
+						WHERE username = "<script type="text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2f95530b71e7".
+in D:\git\fitness\app\protected\controllers\SiteController.php (671)
+in D:\git\fitness\app\index.php (13)
+2016/07/06 18:36:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2' at line 4. The SQL statement executed was: SELECT users.*, roles.name as role_name						
+						FROM users LEFT JOIN roles ON users.role_id = roles.id
+						LEFT JOIN permissions ON users.id = permissions.user_id
+						WHERE username = "<script type="text/javascript"> alert('xxx'); </script>" AND password = "3d51dc2046a62e582c5f2f95530b71e7"' in D:\git\fitness\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\git\fitness\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\git\fitness\app\protected\controllers\SiteController.php(671): CDbCommand->queryAll()
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('login')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/login
+HTTP_REFERER=http://localhost/fitness/app/
+---
+2016/07/08 18:56:29 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "./frontend/index".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('./frontend/inde...', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(5): CController->render('./frontend/inde...')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionIndex()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/index')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/index
+HTTP_REFERER=http://localhost/fitness/app/index.php
+---
+2016/07/08 18:56:29 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "./frontend/index".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('./frontend/inde...', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(5): CController->render('./frontend/inde...')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionIndex()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/index')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/index
+HTTP_REFERER=http://localhost/fitness/app/index.php
+---
+2016/07/08 18:56:35 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "frontend/index".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('frontend/index', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(5): CController->render('frontend/index')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionIndex()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/index')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/index
+HTTP_REFERER=http://localhost/fitness/app/index.php
+---
+2016/07/08 18:58:10 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "frontend/index".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('frontend/index', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(6): CController->render('frontend/index')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionIndex()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/index')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/index
+HTTP_REFERER=http://localhost/fitness/app/index.php
+---
+2016/07/08 18:58:16 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "/index".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('/index', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(6): CController->render('/index')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionIndex()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/index')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/index
+HTTP_REFERER=http://localhost/fitness/app/index.php
+---
+2016/07/08 19:00:53 [error] [php] Undefined variable: layout (D:\git\fitness\app\protected\controllers\FrontendController.php:2)
+Stack trace:
+#0 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#1 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/index
+in D:\git\fitness\app\protected\controllers\FrontendController.php (2)
+in D:\git\fitness\app\index.php (13)
+2016/07/08 19:04:03 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "register".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('register', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(11): CController->render('register')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionRegister()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('register')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/regist...')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/register
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/index
+---
+2016/07/10 14:09:24 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "recommend    ".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('recommend    ', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(23): CController->render('recommend    ')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionRecommend()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('recommend')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/recomm...')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/recommend
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/recommend
+---
+2016/07/10 14:54:55 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:55:10 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:55:19 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:56:11 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:56:24 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:56:35 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:56:50 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:57:21 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:57:54 [error] [php] include(User.php): failed to open stream: No such file or directory (D:\git\fitness\framework\YiiBase.php:432)
+Stack trace:
+#0 D:\git\fitness\app\protected\controllers\FrontendController.php(42): spl_autoload_call()
+#1 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#2 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#4 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#5 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#6 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+in D:\git\fitness\app\protected\controllers\FrontendController.php (42)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:58:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY id DESC' at line 4. The SQL statement executed was: SELECT id 
+                FROM users 
+                LIMIT 1
+                ORDER BY id DESC.
+in D:\git\fitness\app\protected\controllers\FrontendController.php (81)
+in D:\git\fitness\app\protected\controllers\FrontendController.php (66)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:58:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY id DESC' at line 4. The SQL statement executed was: SELECT id 
+                FROM users 
+                LIMIT 1
+                ORDER BY id DESC' in D:\git\fitness\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\git\fitness\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(81): CDbCommand->queryAll()
+#2 D:\git\fitness\app\protected\controllers\FrontendController.php(66): FrontendController->generateCode()
+#3 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#4 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('saveMember')
+#8 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/saveMe...')
+#9 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\git\fitness\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/register
+---
+2016/07/10 14:58:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY id DESC' at line 4. The SQL statement executed was: SELECT id 
+                FROM users 
+                LIMIT 0,1
+                ORDER BY id DESC.
+in D:\git\fitness\app\protected\controllers\FrontendController.php (81)
+in D:\git\fitness\app\protected\controllers\FrontendController.php (66)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 14:58:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY id DESC' at line 4. The SQL statement executed was: SELECT id 
+                FROM users 
+                LIMIT 0,1
+                ORDER BY id DESC' in D:\git\fitness\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\git\fitness\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(81): CDbCommand->queryAll()
+#2 D:\git\fitness\app\protected\controllers\FrontendController.php(66): FrontendController->generateCode()
+#3 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionSaveMember()
+#4 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('saveMember')
+#8 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/saveMe...')
+#9 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\git\fitness\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/register
+---
