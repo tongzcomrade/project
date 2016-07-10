@@ -29,6 +29,12 @@ class FrontendController extends Controller {
         $this->render('login');
     }
 
+    public function actionForgotPassword() {
+        $this->layout = 'frontLayout';
+
+        $this->render('forgotPassword');
+    }
+
     public function actionSaveMember() {
         $post = $_POST;
 
@@ -74,9 +80,68 @@ class FrontendController extends Controller {
         return;
     }
 
-    /**
-     *
-     */
+    public function actionLoginSystem() {
+        $post = $_POST;
+
+        if (empty($post['username']) || empty($post['password'])) {
+            echo CJSON::encode(['status' => 'error', 'msg' => 'กรุณากรอกข้อมูลให้ครบ']);
+            return;
+        }
+
+        $rs = UserModel::login($post['username'], $post['password']);
+
+        if (empty($rs)) {
+            echo CJSON::encode(['status' => 'error', 'msg' => 'กรอกข้อมูลไม่ถูกต้อง']);
+            return;
+        }
+
+        if ($rs[0]['status'] == 0) {
+            echo CJSON::encode(['status' => 'error', 'msg' => 'กรุณายืนยันข้อมูลกับพนักงานคะ']);
+            return;
+        }
+        
+        // TODO Login
+        echo CJSON::encode(['status' => 'ok', 'msg' => 'login', 'data' => $rs]);
+        return;
+    }
+
+    public function actionResetPassword() {
+        $post = $_POST;
+
+        if (empty($post['username']) || empty($post['question']) || empty($post['answer'])) {
+            echo CJSON::encode(['status' => 'error', 'msg' => 'กรอกข้อมูลไม่ครบ']);
+            return;
+        }
+
+        $rs = UserModel::findUserByQuestion($post);
+
+        if (empty($rs)) {
+            echo CJSON::encode(['status' => 'error', 'msg' => 'กรอกข้อมูลไม่ถูกต้อง']);
+            return;
+        }
+
+        $token = md5($rs[0]['id']);
+        echo CJSON::encode(['status' => 'ok', 'msg' => '', 'data' => $rs[0]['id']]);
+        return;
+    }
+
+    public function actionResetNewPassword() {
+        $this->layout = 'frontLayout';
+
+        $this->render('resetPassword', array('token' => $_GET['token']));
+    }
+    
+    public function actionReset() {
+        $post = $_POST;
+        
+        $userModel = UserModel::model()->findByPk($post['token']);
+        $userModel->password = md5($post['password']);
+        $userModel->save();
+
+        echo CJSON::encode(['status' => 'ok', 'msg' => 'แก้ไขรหัสผ่านเสร็จสิ้น', 'data' => []]);
+        return;
+    }
+    
     public function generateCode() {
         $sql = 'SELECT id + 1 as max
                 FROM users 

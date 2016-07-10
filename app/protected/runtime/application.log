@@ -6759,3 +6759,285 @@ Stack trace:
 REQUEST_URI=/fitness/app/index.php?r=frontend/saveMember
 HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/register
 ---
+2016/07/10 16:15:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'กกก' in 'where clause'. The SQL statement executed was: SELECT * 
+                FROM users
+                WHERE username = กกก AND password = "a1d55e4ba639946baff808670690527c" 
+                ORDER BY id DESC
+                LIMIT 0,1.
+in D:\git\fitness\app\protected\controllers\FrontendController.php (90)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 16:15:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'กกก' in 'where clause'. The SQL statement executed was: SELECT * 
+                FROM users
+                WHERE username = กกก AND password = "a1d55e4ba639946baff808670690527c" 
+                ORDER BY id DESC
+                LIMIT 0,1' in D:\git\fitness\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\git\fitness\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(90): CDbCommand->queryAll()
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionLoginSystem()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('loginSystem')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/loginS...')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/loginSystem
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:16:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ddd' in 'where clause'. The SQL statement executed was: SELECT * 
+                FROM users
+                WHERE username = ddd AND password = "77963b7a931377ad4ab5ad6a9cd718aa" 
+                ORDER BY id DESC
+                LIMIT 0,1.
+in D:\git\fitness\app\protected\controllers\FrontendController.php (90)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 16:16:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ddd' in 'where clause'. The SQL statement executed was: SELECT * 
+                FROM users
+                WHERE username = ddd AND password = "77963b7a931377ad4ab5ad6a9cd718aa" 
+                ORDER BY id DESC
+                LIMIT 0,1' in D:\git\fitness\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\git\fitness\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(90): CDbCommand->queryAll()
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionLoginSystem()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('loginSystem')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/loginS...')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/loginSystem
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:28:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "forgotPassword".' in D:\git\fitness\framework\web\CController.php:483
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(270): CController->missingAction('forgotPassword')
+#1 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#2 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgotPass...')
+#3 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\git\fitness\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:32:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "forgotPassword".' in D:\git\fitness\framework\web\CController.php:483
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(270): CController->missingAction('forgotPassword')
+#1 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#2 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgotPass...')
+#3 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\git\fitness\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:32:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "forgotPassword".' in D:\git\fitness\framework\web\CController.php:483
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(270): CController->missingAction('forgotPassword')
+#1 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#2 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgotPass...')
+#3 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\git\fitness\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:32:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "forgotPassword".' in D:\git\fitness\framework\web\CController.php:483
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(270): CController->missingAction('forgotPassword')
+#1 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#2 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgotPass...')
+#3 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\git\fitness\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "forgotPassword".' in D:\git\fitness\framework\web\CController.php:483
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(270): CController->missingAction('forgotPassword')
+#1 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#2 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgotPass...')
+#3 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\git\fitness\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:33:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "forgotPassword".' in D:\git\fitness\framework\web\CController.php:483
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(270): CController->missingAction('forgotPassword')
+#1 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#2 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgotPass...')
+#3 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\git\fitness\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:33:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "forgotPassword".' in D:\git\fitness\framework\web\CController.php:483
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(270): CController->missingAction('forgotPassword')
+#1 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#2 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('site/forgotPass...')
+#3 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\git\fitness\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fitness/app/index.php?r=site/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:34:00 [error] [exception.CException] exception 'CException' with message 'FrontendController cannot find the requested view "forgot-password".' in D:\git\fitness\framework\web\CController.php:878
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(782): CController->renderPartial('forgot-password', NULL, true)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(35): CController->render('forgot-password')
+#2 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionForgotPassword()
+#3 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('forgotPassword')
+#7 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/forgot...')
+#8 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 D:\git\fitness\app\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/forgotPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/login
+---
+2016/07/10 16:54:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\git\fitness\framework\web\CController.php:336
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('resetNewPasswor...')
+#4 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/resetN...')
+#5 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 D:\git\fitness\app\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/resetNewPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/forgotPassword
+---
+2016/07/10 16:54:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\git\fitness\framework\web\CController.php:336
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('resetNewPasswor...')
+#4 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/resetN...')
+#5 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 D:\git\fitness\app\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/resetNewPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/forgotPassword
+---
+2016/07/10 16:54:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\git\fitness\framework\web\CController.php:336
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('resetNewPasswor...')
+#4 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/resetN...')
+#5 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 D:\git\fitness\app\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/resetNewPassword
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/forgotPassword
+---
+2016/07/10 16:54:50 [error] [php] Undefined index: token (D:\git\fitness\app\protected\controllers\FrontendController.php:130)
+Stack trace:
+#0 D:\git\fitness\framework\web\CController.php(286): FrontendController->runAction()
+#1 D:\git\fitness\framework\web\CController.php(265): FrontendController->runActionWithFilters()
+#2 D:\git\fitness\framework\web\CWebApplication.php(282): FrontendController->run()
+#3 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 D:\git\fitness\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/fitness/app/index.php?r=frontend/resetNewPassword
+in D:\git\fitness\app\protected\controllers\FrontendController.php (130)
+in D:\git\fitness\app\index.php (13)
+2016/07/10 17:11:45 [error] [exception.CException] exception 'CException' with message 'UserModel and its behaviors do not have a method or closure named "findById".' in D:\git\fitness\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\git\fitness\framework\db\ar\CActiveRecord.php(227): CComponent->__call('findById', Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(137): CActiveRecord->__call('findById', Array)
+#2 D:\git\fitness\app\protected\controllers\FrontendController.php(137): UserModel->findById('1')
+#3 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionReset()
+#4 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('reset')
+#8 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/reset')
+#9 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\git\fitness\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/reset
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/resetNewPassword&token=1
+---
+2016/07/10 17:11:50 [error] [exception.CException] exception 'CException' with message 'UserModel and its behaviors do not have a method or closure named "findById".' in D:\git\fitness\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\git\fitness\framework\db\ar\CActiveRecord.php(227): CComponent->__call('findById', Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(137): CActiveRecord->__call('findById', Array)
+#2 D:\git\fitness\app\protected\controllers\FrontendController.php(137): UserModel->findById('1')
+#3 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionReset()
+#4 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('reset')
+#8 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/reset')
+#9 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\git\fitness\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/reset
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/resetNewPassword&token=1
+---
+2016/07/10 17:11:52 [error] [exception.CException] exception 'CException' with message 'UserModel and its behaviors do not have a method or closure named "findById".' in D:\git\fitness\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\git\fitness\framework\db\ar\CActiveRecord.php(227): CComponent->__call('findById', Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(137): CActiveRecord->__call('findById', Array)
+#2 D:\git\fitness\app\protected\controllers\FrontendController.php(137): UserModel->findById('1')
+#3 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionReset()
+#4 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('reset')
+#8 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/reset')
+#9 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\git\fitness\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/reset
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/resetNewPassword&token=1
+---
+2016/07/10 17:12:05 [error] [exception.CException] exception 'CException' with message 'UserModel and its behaviors do not have a method or closure named "findById".' in D:\git\fitness\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\git\fitness\framework\db\ar\CActiveRecord.php(227): CComponent->__call('findById', Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(137): CActiveRecord->__call('findById', Array)
+#2 D:\git\fitness\app\protected\controllers\FrontendController.php(137): UserModel->findById('1')
+#3 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionReset()
+#4 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('reset')
+#8 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/reset')
+#9 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\git\fitness\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/reset
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/resetNewPassword&token=1
+---
+2016/07/10 17:12:35 [error] [exception.CException] exception 'CException' with message 'UserModel and its behaviors do not have a method or closure named "findById".' in D:\git\fitness\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\git\fitness\framework\db\ar\CActiveRecord.php(227): CComponent->__call('findById', Array)
+#1 D:\git\fitness\app\protected\controllers\FrontendController.php(137): CActiveRecord->__call('findById', Array)
+#2 D:\git\fitness\app\protected\controllers\FrontendController.php(137): UserModel->findById('1')
+#3 D:\git\fitness\framework\web\actions\CInlineAction.php(49): FrontendController->actionReset()
+#4 D:\git\fitness\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\git\fitness\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\git\fitness\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\git\fitness\framework\web\CWebApplication.php(282): CController->run('reset')
+#8 D:\git\fitness\framework\web\CWebApplication.php(141): CWebApplication->runController('frontend/reset')
+#9 D:\git\fitness\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\git\fitness\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fitness/app/index.php?r=frontend/reset
+HTTP_REFERER=http://localhost/fitness/app/index.php?r=frontend/resetNewPassword&token=1
+---
